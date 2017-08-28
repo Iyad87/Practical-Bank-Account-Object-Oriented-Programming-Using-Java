@@ -21,7 +21,7 @@ public class Account {
     return  (amount > balance && balance >=50)?false : true;
   }
   public void deposit(double amount){
-
+      this.balance =+ amount;
   }
   public void setBalance(double newBalance){
       this.balance = newBalance;

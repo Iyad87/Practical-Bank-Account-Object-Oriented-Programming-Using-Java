@@ -1,7 +1,15 @@
-public class SavingAccount extends Account {
+public class SavingAccount extends PersonalAccount {
 
     private double interest;
-
+    public SavingAccount(int accNumber, double balance){
+        while(balance <50){
+            System.out.println("Saving account require a minimum balance of 50 dollar..");
+            System.out.print("Please re-enter the balance: ");
+            balance = _scn.nextDouble();
+        }
+        this.balance = balance;
+        this.accountNumber = accNumber;
+    }
     public void addInterest(double interestRate) {
          setInterest( (getBalance() * interestRate) );
 
