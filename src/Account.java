@@ -18,7 +18,7 @@ public class Account {
         return balance;
     }
   public boolean withdraw(double amount){
-    return  (amount <= balance)?true : false;
+    return  (amount > balance && balance >=50)?false : true;
   }
   public void deposit(double amount){
 

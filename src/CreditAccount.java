@@ -1,33 +1,43 @@
-import com.sun.deploy.security.CredentialInfo;
 
 import java.util.Date;
 
-public class CreditAccount extends  Account {
+public class CreditAccount extends Account {
 
-    protected double creditLimit = 0.0F;
-    protected double interest = 0.0F;
-    protected Date  dueDate = new Date();
-    protected double outstanding = 0;
-    public CreditAccount(int accountNum , double creditLimit, double interest){
-       super(accountNum , 0);
-       this.creditLimit = creditLimit;
-       this.interest = interest;
+    private double creditLimit = 1000.0F;
+    private double interest = 0.0F;
+    private Date dueDate = new Date();
+    private double outstanding = 0;
+
+    public CreditAccount(int accountNum, double interest) {
+        super(accountNum);
+        this.creditLimit = 1000.00F;
+        this.interest = interest;
     }
-//    public double calculatePayment(){
-//
-//    }
-    public void chargeInterest(){
+
+    /**    public double calculatePayment(){
+
+  } **/
+    public void chargeInterest() {
         setBalance(getBalance() + (getBalance() * (interest / 12)));
     }
 
-    public void deposit(double amount){
+    public void deposit(double amount) {
         setBalance(getBalance() - amount);
         outstanding -= amount;
 
-        if(outstanding <0){
+        if (outstanding < 0) {
             outstanding = 0;
         }
 
+    }
+    public boolean withdraw(double amount){
+//        return  (amount > balance)?false : true;
+
+        if(amount < getBalance() && getBalance() >=50 && getBalance() <=creditLimit){
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
