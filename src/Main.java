@@ -27,14 +27,14 @@ public class Main {
                 char choice2 = _scn.nextLine().charAt(0);
 
                 // Create an Personal Account
-                int accountNumber;
+                String accountNumber;
                 double balance;
                 switch (choice2) {
                     case 'a':
                     case 'A':
                         // Saving account registration
                         System.out.print("Please provide an account number: ");
-                         accountNumber = _scn.nextInt();
+                         accountNumber =  _scn.nextLine();
                         System.out.print("Please provide a new balance: ");
                        balance = _scn.nextDouble();
                         SavingAccount account = new SavingAccount(accountNumber,balance);
@@ -46,7 +46,7 @@ public class Main {
                     case 'B':
 //                    Current Account Registration
                         System.out.print("Please provide an account number: ");
-                        accountNumber = _scn.nextInt();
+                        accountNumber = _scn.nextLine();
                         System.out.print("Please provide a new balance: ");
                          balance = _scn.nextDouble();
                         CurrentAccount account2 = new CurrentAccount(accountNumber,balance);
@@ -57,7 +57,7 @@ public class Main {
                     case 'C':
                         //Fixed Deposit Registration
                         System.out.print("Please provide an account number: ");
-                        accountNumber = _scn.nextInt();
+                        accountNumber = _scn.nextLine();
                         System.out.print("Please provide a new balance: ");
                         balance = _scn.nextDouble();
                         FixedDeposit account3 = new FixedDeposit(accountNumber,balance);
@@ -66,7 +66,7 @@ public class Main {
                     case 'd':
                     case 'D':
                         System.out.print("Please provide an account number: ");
-                        accountNumber = _scn.nextInt();
+                        accountNumber =  _scn.nextLine();
                         System.out.print("Please provide a new balance: ");
                         balance = _scn.nextDouble();
                         ConventionalAccount account4 = new ConventionalAccount(accountNumber,balance);
@@ -76,7 +76,7 @@ public class Main {
                     case 'e':
                     case 'E':
                         System.out.print("Please provide an account number: ");
-                        accountNumber = _scn.nextInt();
+                        accountNumber = _scn.nextLine();
                         System.out.print("Please provide a new balance: ");
                         balance = _scn.nextDouble();
                         IslamicAccount account5 = new IslamicAccount(accountNumber,balance);

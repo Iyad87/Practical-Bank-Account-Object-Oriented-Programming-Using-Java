@@ -1,7 +1,7 @@
 
 
 public class IslamicAccount extends PersonalAccount {
-    public IslamicAccount(int accNumber, double balance){
+    public IslamicAccount(String accNumber, double balance){
         while(balance <50){
             System.out.println("Islamic account require a minimum balance of 50 dollar..");
             System.out.print("Please re-enter the balance: ");

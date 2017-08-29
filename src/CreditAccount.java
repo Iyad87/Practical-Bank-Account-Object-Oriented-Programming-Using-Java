@@ -8,7 +8,7 @@ public class CreditAccount extends Account {
     private Date dueDate = new Date();
     private double outstanding = 0;
 
-    public CreditAccount(int accountNum, double interest) {
+    public CreditAccount(String accountNum, double interest) {
         super(accountNum);
         this.creditLimit = 1000.00F;
         this.interest = interest;
